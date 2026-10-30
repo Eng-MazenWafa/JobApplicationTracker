@@ -7,8 +7,12 @@ namespace JobApplicationTracker
     {
         static void Main(string[] args)
         {
-            // تشغيل تدريبات الـ Collections
+            // Collections
             CollectionsPractice.RunAllPractices();
+
+            // Generics
+             GenericsPractice.RunAllGenericsPractices();
+
 
             Console.WriteLine("Press any key to exit...");
            // Console.ReadKey();
