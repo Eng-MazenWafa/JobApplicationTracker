@@ -29,6 +29,10 @@ namespace JobApplicationTracker.Practice
 ...
 ");
             RunQueuePractice();
+                Console.WriteLine(@"Running HashSet Practice...
+...
+");
+            RunHashSetPractice();
 
 
         }
@@ -192,6 +196,60 @@ namespace JobApplicationTracker.Practice
 
         }
         #endregion
+
+        #region HAshSet
+        public static void RunHashSetPractice()
+        {
+            void displayHashSet(HashSet<int> myHashSet)
+            {
+                foreach (var item in myHashSet)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            HashSet<int> myHashSet1 = new HashSet<int> { 1, 2, 3, 4, 5 };    
+            HashSet<int> myHashSet2 = new HashSet<int> { 4, 5, 6, 7, 8 };
+            HashSet<int> myHashSet3 = new HashSet<int> { 4, 5};
+
+
+            //add 
+            Console.WriteLine("add------------------");
+            myHashSet1.Add(6);
+            displayHashSet(myHashSet1);
+
+            //remove
+            Console.WriteLine("remove------------------");
+            myHashSet1.Remove(6);
+            displayHashSet(myHashSet1);
+
+            //union
+            Console.WriteLine("union------------------");
+            var unionSet = myHashSet1.Union(myHashSet2);
+            // or  myHashSet1.UnionWith(myHashSet2);
+            displayHashSet(new HashSet<int>(unionSet));
+
+            //intersection
+            Console.WriteLine("intersection------------------");
+            var intersectionSet = myHashSet1.Intersect(myHashSet2);
+            // or  myHashSet1.IntersectWith(myHashSet2);
+            displayHashSet(new HashSet<int>(intersectionSet));
+
+            //difference
+            Console.WriteLine("difference------------------");
+            var differenceSet = myHashSet1.Except(myHashSet2);
+            displayHashSet(new HashSet<int>(differenceSet));
+
+            // issubset
+            Console.WriteLine("issubset------------------");
+            Console.WriteLine(myHashSet3.IsSubsetOf(myHashSet1)); // True
+
+
+
+        }
+        #endregion
+
+
 
 
 
