@@ -29,6 +29,7 @@ namespace JobApplicationTracker.Practice
                 _Items.Add(item);
             }
 
+
             public void DisplayItems()
             {
                 foreach (var item in _Items)
@@ -38,8 +39,33 @@ namespace JobApplicationTracker.Practice
             }
 
 
+          
         }
 
+        public interface IEntity<TID>
+        {
+            TID Id { get; set; }
+
+        }
+
+        public class product : IEntity<int>
+        {
+             public int Id { get; set; }
+
+        }
+
+        public class Repository<T> where T : class, IEntity<int>
+        {
+            private List<T> _entities = new List<T>();
+            public void Add(T entity)
+            {
+                _entities.Add(entity);
+            }
+            public T GetById(int id)
+            {
+                return _entities.Find(e => e.Id == id);
+            }
+        }
 
         public static void RunAllGenericsPractices()
         {
@@ -63,6 +89,8 @@ namespace JobApplicationTracker.Practice
             anyList2.AddItem(1);
             anyList2.AddItem(2);
             anyList2.DisplayItems();
+
+
 
 
 
