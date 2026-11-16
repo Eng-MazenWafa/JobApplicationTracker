@@ -5,7 +5,7 @@ namespace JobApplicationTracker.Models
     {
         Submitted, 
         UnderReview,
-        Interview,
+        Interview, 
         Accepted,
         Rejected
     }
