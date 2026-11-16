@@ -13,7 +13,7 @@ namespace JobApplicationTracker.Services
                 return false;
             }
 
-            if (GetByID(item.Id) != null)
+            if (GetById(item.Id) != null)
             {
                 return false;
             }
@@ -23,7 +23,7 @@ namespace JobApplicationTracker.Services
             return true;
         }
 
-        public T? GetByID(int id)
+        public T? GetById(int id)
         {
             foreach(T item in _items)
             {

@@ -1,6 +1,6 @@
 namespace JobApplicationTracker.Models
 {
-    public enum ComppanyStatus
+    public enum CompanyStatus
     {
         Pending, 
         Approved, 
@@ -16,6 +16,6 @@ namespace JobApplicationTracker.Models
 
         public string City { get; set; } = string.Empty;
 
-        public ComppanyStatus Status { get; set; } = ComppanyStatus.Pending;
+        public CompanyStatus Status { get; set; } = CompanyStatus.Pending;
     }
 }
