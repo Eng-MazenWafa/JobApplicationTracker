@@ -22,7 +22,7 @@ namespace JobApplicationTracker.Services
             _companyService = companyService;
         }
 
-        public bool ApllyToJob(int candidateId,int jobId,out string message)
+        public bool ApplyToJob(int candidateId,int jobId,out string message)
         {
 
             Candidate? candidate=_candidateService.GetCandidateById(candidateId);

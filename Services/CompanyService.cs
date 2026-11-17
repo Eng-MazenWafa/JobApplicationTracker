@@ -142,7 +142,7 @@ namespace JobApplicationTracker.Services
         }
 
         //undo last change
-        public bool UndoLastStatusCjange(out string Message)
+        public bool UndoLastStatusChange(out string Message)
         {
             if(_UndoStack.Count==0)
             {
