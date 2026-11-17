@@ -259,7 +259,7 @@ namespace JobApplicationTracker.Services
             return true;
         }
 
-        public Recruiter? GetById(int id)
+        public Recruiter? GetRecruiterById(int id)
         {
             return _recruiterStore.GetById(id);
 

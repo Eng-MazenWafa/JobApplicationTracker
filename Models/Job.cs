@@ -1,6 +1,6 @@
 namespace JobApplicationTracker.Models
 {
-    public class Jop : IEntity
+    public class Job : IEntity
     {
         public int Id { get; set; }
         public required string Title { get; set; } = string.Empty;
